@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: coltonklable/actions@
+      uses: coltonklable/actions@v2
       with:
         who-to-greet: 'Colton'
     # Use the output from the `hello` step
