@@ -1,15 +1,15 @@
+name: Shell Commands Action
+
 on: [push]
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
-    steps:
-    - name: Hello world action step
-      id: hello
-      uses: actions/checkout@v2
-      with:
-        who-to-greet: ''
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    run-shell-command:
+        runs-on: ubuntu-latest
+        steps:
+          - name: echo a string
+            run: echo "Hello, World!"
+          - name: multi-line script
+            run: |
+              node -v
+              npm -v
+
