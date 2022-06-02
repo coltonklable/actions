@@ -6,15 +6,24 @@ jobs:
     run-shell-command:
         runs-on: ubuntu-latest
         steps:
-          - name: echo a string
+          - name: Echo a String
             run: echo "Hello, World!"
           - name: multi-line script
             run: |
               node -v
               npm -v
-          - name: python command
+          - name: python command ro print processor being used
             run: |
               import platform
               print(platform.processor())
             shell: python
+    
+    run-windows-command:
+      runs-on: windows-latest
+      steps:
+        - name: Directory Windows
+          run: Get-Location
+        - name: Directory Bash
+          run: pwd
+          shell: bash
 
