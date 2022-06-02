@@ -20,6 +20,8 @@ jobs:
     
     run-windows-command:
       runs-on: windows-latest
+      #make this job run after jobs listed in array finish successfully
+      needs: ['run-shell-command']
       steps:
         - name: Directory Windows
           run: Get-Location
