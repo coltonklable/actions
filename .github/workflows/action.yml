@@ -1,7 +1,7 @@
 name: Actions Workflow
 
 on: 
-  repository-dispatch: 
+  repository_dispatch: 
     types: [build]
   #push:
   # pull-request:
