@@ -1,6 +1,16 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+on: 
+  repository-dispatch: 
+    types: [build]
+  #push:
+  # pull-request:
+  #   #make an object
+  #   types: [closed, assigned, opened, reopened]
+  #make a cron schedule
+  # schedule:
+  #   #this will run every 5 minutes starting at minute 0
+  #   - cron: "0/5 * * * *" #'minute hour day month day of week'
 
 jobs:
   run-github-actions:
