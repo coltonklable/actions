@@ -17,13 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Payload
-            run: echo {{github.event.client_payload}}
-            
+            run: echo {{github.event.client_payload.env}}
         - name: list files
           run: |
             pwd
             ls
-
         - name: Checkout
           uses: actions/checkout@v1 #clones repo into runner, giving access to all files
 
