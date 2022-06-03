@@ -6,6 +6,8 @@ jobs:
     run-shell-command:
         runs-on: ubuntu-latest
         steps:
+          - name: Payload
+            run: echo {{github.event.client_payload}}
           - name: Echo a String
             run: echo "Hello, World!"
           - name: multi-line script
